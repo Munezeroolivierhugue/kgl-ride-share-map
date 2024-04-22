@@ -1,4 +1,4 @@
-## Ride-Share Route Tracker with ETA (React & Google Maps API) ##
+# Ride-Share Route Tracker with ETA (React & Google Maps API) #
 This repository demonstrates a web application built with React.js and the Google Maps API. It simulates a ride-sharing scenario, displaying a route with markers for stops and calculating an estimated time of arrival (ETA) for the next stop.
 
 ## Features: ##
@@ -17,7 +17,7 @@ Start the development server: npm start (Opens the application in your web brows
 Frontend: React.js
 Mapping and Routing: Google Maps API
 
-# Note: #
+## Note: ##
 
 An API key for the Google Maps API is not included in this repository. You'll need to obtain your own API key and configure the application accordingly.
 Further Development:

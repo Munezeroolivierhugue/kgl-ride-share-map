@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+## Ride-Share Route Tracker with ETA (React & Google Maps API) ##
+This repository demonstrates a web application built with React.js and the Google Maps API. It simulates a ride-sharing scenario, displaying a route with markers for stops and calculating an estimated time of arrival (ETA) for the next stop.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features: ##
 
-## Available Scripts
+Interactive map visualization with route and stop markers
+Basic ETA calculation based on pre-defined route and average speed
 
-In the project directory, you can run:
+## Setup Instructions: ##
 
-### `npm start`
+Clone this repository: git clone https://<your_github_username>@github.com/<your_username>/<repository_name>.git
+Install dependencies: npm install
+Start the development server: npm start (Opens the application in your web browser)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used: ##
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Frontend: React.js
+Mapping and Routing: Google Maps API
 
-### `npm test`
+# Note: #
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+An API key for the Google Maps API is not included in this repository. You'll need to obtain your own API key and configure the application accordingly.
+Further Development:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Implementation of real-time driver location tracking.
+Integrate with a backend for user interaction and data persistence.
+Enhance the ETA calculation with dynamic speed adjustments.
+This project serves as a foundation for exploring React development and Google Maps API integration. Feel free to explore further functionalities and customize the application to your needs.

@@ -1,6 +1,5 @@
-import "./App.css";
-import MyButton from "./components/buttons";
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 function App() {
   const products = [
     { title: "Cabbage", id: 1 },
@@ -13,11 +12,12 @@ function App() {
 
   return (
     <div>
+      <Header/>
       hello world
       <div>
-        <MyButton />
-        <ul>{listItems}</ul>
+        <ul className="text-orange-500 bg-green-200">{listItems}</ul>
       </div>
+      <Footer/>
     </div>
   );
 }

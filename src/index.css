@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.Header-gradient-class {
+    @apply bg-gradient-to-r from-sky-400 to-emerald-500;
+  }
+
+  .Footer-gradient-class {
+    @apply bg-gradient-to-r from-sky-600 to-emerald-500;
+  }

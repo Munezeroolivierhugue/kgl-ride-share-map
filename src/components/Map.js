@@ -1,19 +1,19 @@
 import React from 'react';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
-const libraries = ['places'];
+const libraries = ['places','routes'];
 const mapContainerStyle = {
-  width: '100vw',
+  width: '100%',
   height: '100vh',
 };
 const center = {
-  lat: 7.2905715, // default latitude
-  lng: 80.6337262, // default longitude
+  lat: -1.939826787816454, // default latitude
+  lng: 30.0445426438232, // default longitude
 };
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.API_KEY,
+    googleMapsApiKey: 'AIzaSyBmBJIWcBrbU8MWMVLj3psic3Hixqu3ojg',
     libraries,
   });
 
@@ -29,13 +29,14 @@ const Map = () => {
     <div>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
-        zoom={10}
+        zoom={15}
         center={center}
       >
-        <Marker position={center} />
+        {isLoaded && <Marker key="Kigali" position={center} />}
       </GoogleMap>
     </div>
   );
 };
 
 export default Map;
+// google.maps.marker.AdvancedMarkerElement

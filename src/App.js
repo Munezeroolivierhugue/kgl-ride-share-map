@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Map from "./components/Map";
+import MapComponent from "./components/Map";
 import Details from "./components/Details";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Header/>
       <div>
         <Details/>
-        <Map/>
+        <MapComponent/>
       </div>
       <Footer/>
     </div>

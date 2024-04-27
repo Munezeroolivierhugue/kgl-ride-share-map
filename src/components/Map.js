@@ -1,4 +1,4 @@
-import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
+import { APIProvider, Map, AdvancedMarker} from "@vis.gl/react-google-maps";
 import React, { useState, useEffect } from "react";
 
 const routeData = [
@@ -33,18 +33,21 @@ const routeData = [
 ];
 const startingPoint = routeData[0].location;
 
-const MapComponent = () => {
-  const [map, setMap] = useState(null);
+const MapComponent = ({ directionsRenderer }) => {
+  console.log(directionsRenderer)
   return (
     <div className="h-screen w-auto">
       <APIProvider apiKey={"AIzaSyBmBJIWcBrbU8MWMVLj3psic3Hixqu3ojg"}>
-        <Map zoom={15} center={startingPoint} mapId={"b9a94b95a3327099"} onLoad={(map) => setMap(map)}>
+        <Map zoom={15} center={startingPoint} mapId={"b9a94b95a3327099"}>
         {routeData.map((stop) => (
         <AdvancedMarker
           key={stop.location.lat + stop.location.lng}
           position={stop.location}
         />
       ))}
+      {directionsRenderer && (
+          <DirectionsRenderer directions={directionsRenderer.directions} />
+        )}
         </Map>
       </APIProvider>
     </div>

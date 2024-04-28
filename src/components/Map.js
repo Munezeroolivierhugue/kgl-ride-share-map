@@ -1,4 +1,4 @@
-import { APIProvider, Map, AdvancedMarker} from "@vis.gl/react-google-maps";
+import { APIProvider, Map, AdvancedMarker, useMap, useMapsLibrary} from "@vis.gl/react-google-maps";
 import React, { useState, useEffect } from "react";
 
 const routeData = [
@@ -32,26 +32,60 @@ const routeData = [
   },
 ];
 const startingPoint = routeData[0].location;
+const endingPoint = routeData[routeData.length - 1].location;
 
 const MapComponent = ({ directionsRenderer }) => {
-  console.log(directionsRenderer)
+  console.log(directionsRenderer,"DIRECTIONDENDERER")
   return (
     <div className="h-screen w-auto">
       <APIProvider apiKey={"AIzaSyBmBJIWcBrbU8MWMVLj3psic3Hixqu3ojg"}>
-        <Map zoom={15} center={startingPoint} mapId={"b9a94b95a3327099"}>
+        <Map zoom={13} center={startingPoint} mapId={"b9a94b95a3327099"}>
         {routeData.map((stop) => (
         <AdvancedMarker
           key={stop.location.lat + stop.location.lng}
           position={stop.location}
         />
       ))}
-      {directionsRenderer && (
-          <DirectionsRenderer directions={directionsRenderer.directions} />
-        )}
+      <Directions/>
         </Map>
       </APIProvider>
     </div>
   );
 };
+
+function Directions(){
+  const map = useMap();
+  const waypoints = routeData.slice(1, -1).map((stop) => ({
+    location: new window.google.maps.LatLng(stop.location.lat, stop.location.lng),
+    stopover: true,
+  }));
+    const request = {
+      origin: startingPoint,
+      destination: endingPoint,
+      waypoints,
+      travelMode: 'DRIVING', // Allow customization here
+    };
+  const routesLibrary = useMapsLibrary("routes");
+  const [directionsService, setDirectionsService] = useState(null);
+  const [directionsRenderer, setDirectionsRenderer] = useState(null);
+  const [routes, setRoutes] = useState()
+  console.log(waypoints,"[][]][][[][]][][][][][][][][][]")
+
+  useEffect(()=>{
+    if(!routesLibrary || !map) return;
+    setDirectionsService(new routesLibrary.DirectionsService())
+    setDirectionsRenderer(new routesLibrary.DirectionsRenderer({map}))
+
+  }, [routesLibrary,map])
+  
+  useEffect(()=>{
+    if(!directionsService || !directionsRenderer)return;
+      directionsService.route(request).then(response => {
+        directionsRenderer.setDirections(response);
+        setRoutes(response.routes);
+      })
+    
+  },[directionsService,directionsRenderer])
+}
 
 export default MapComponent;

@@ -3,14 +3,20 @@ This repository demonstrates a web application built with React.js and the Googl
 
 ## Features: ##
 
- Interactive map visualization route
- display of stop markers
- Basic ETA calculation based on pre-defined route and average speed
+- Interactive map visualization route
+
+- display of stop markers
+
+- Basic ETA calculation based on pre-defined route and average speed
 
 ## Setup Instructions: ##
 
 Clone this repository: git clone https://github.com/Munezeroolivierhugue/kgl-ride-share-map.git
+
+
 Install dependencies: npm install @vis.gl/react-google-maps (if it is not working try removing the @ sign)
+
+
 Start the development server: npm run dev / npm start (Opens the application in your web browser)
 
 ## Technologies Used: ##

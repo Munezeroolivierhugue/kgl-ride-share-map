@@ -3,9 +3,9 @@ This repository demonstrates a web application built with React.js and the Googl
 
 ## Features: ##
 
-* Interactive map visualization route
-* display of stop markers
-* Basic ETA calculation based on pre-defined route and average speed
+ Interactive map visualization route
+ display of stop markers
+ Basic ETA calculation based on pre-defined route and average speed
 
 ## Setup Instructions: ##
 

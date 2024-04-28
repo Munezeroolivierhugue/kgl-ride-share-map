@@ -22,7 +22,9 @@ Start the development server: npm run dev / npm start (Opens the application in 
 ## Technologies Used: ##
 
 Frontend: React.js
+
 styling: Tailwind css
+
 Mapping and Routing: Google Maps API
 
 ## Note: ##
